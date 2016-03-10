@@ -6,6 +6,9 @@ import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+
 import java.util.*;
 
 /**
@@ -13,14 +16,39 @@ import java.util.*;
  */
 public class GenerateFragment extends Fragment {
 
+    //Variables declared
+    EditText eUserInput;
+    EditText eOutPut;
+
+    Button bGenerate;
+    Button bSave;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_generate,container,false);
 
+        //Initializing widgets
+        //Edit Text Id's
+        eUserInput = (EditText) v.findViewById(R.id.etUserInput);
+        eOutPut = (EditText) v.findViewById(R.id.etOutPut);
+
+        //Initializing widgets
+        //Button Id's
+        bGenerate = (Button) v.findViewById(R.id.bGenerate);
+        bSave = (Button) v.findViewById(R.id.bSave);
+
+
+        /*
+            NEXT STEPS:
+            Input from Edit Text
+         */
+
+
+
         return v;
     }
 
-    public String generate() {
+    public String generate(int x) {
 
         Scanner vitamin = new Scanner(System.in); //Scanner for randomString Function
         Random password = new Random(); // Object used to create Random String
@@ -32,9 +60,13 @@ public class GenerateFragment extends Fragment {
         String[] alphabet = {"A", "a", "B", "b", "C", "c", "D", "d", "E", "e", "F", "f", "G", "g", "H", "h", "I", "i", "J", "j", "K", "k", "L", "l",
                 "M", "m", "N", "n", "O", "o", "P", "p", "Q", "q", "R", "r", "S", "s", "T", "t", "U", "u", "V", "v", "W", "w", "X", "x", "Y", "y", "Z", "z"};
 
-        System.out.println("How many character would you like your password to include? : ");
+        /**
+         * We have declared all our variables that will
+         * be used for the Generate Password algorithm
+         *
+          */
+        c = x;
         c = vitamin.nextInt();
-        System.out.println();
         int nc = (c / 2) + 1;
         int ncm = (nc / 2);
         int totalValues = c / 2;
