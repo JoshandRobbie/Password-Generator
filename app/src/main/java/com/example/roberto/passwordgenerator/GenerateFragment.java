@@ -1,5 +1,6 @@
 package com.example.roberto.passwordgenerator;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.text.Layout;
@@ -12,7 +13,16 @@ import android.widget.EditText;
 import java.util.*;
 
 /**
- * Created by Roberto on 3/3/2016.
+ * Created by Robert Ortiz
+ * 3/3/2016
+ *
+ * Modified by Robert Ortiz and Joshua Cantero [Start] 3.5.16 - PRESENT DAY
+ *
+ * Description:
+ * This program generates a random password for the user based on the amount of characters
+ * he/she would like their password to contain
+ *
+ * References other classes and XML files to allow the widgets to fully function
  */
 public class GenerateFragment extends Fragment {
 
@@ -25,7 +35,7 @@ public class GenerateFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.fragment_generate,container,false);
+        View v = inflater.inflate(R.layout.fragment_generate, container, false);
 
         //Initializing widgets
         //Edit Text Id's
@@ -43,10 +53,26 @@ public class GenerateFragment extends Fragment {
             Input from Edit Text
          */
 
-
-
         return v;
+
     }
+
+    /*
+        Not complete, contains errors
+        FUNCTION: To store the data, into a local data base (Users device)
+     */
+    public void saveInfo(View view){
+        SharedPreferences sharedPref = getSharedPreferences("etOutPut", getContext().MODE_PRIVATE);
+
+        SharedPreferences.Editor edit = sharedPref.edit();
+
+        editor.putString("Password", eOutPut.getText().toStirng());
+
+
+
+    }
+
+
 
     public String generate(int x) {
 
