@@ -5,6 +5,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -25,6 +26,10 @@ import java.util.Random;
  */
 public class GenerateFragment extends Fragment {
 
+    //declared Array
+   // String[] savedPasswords;
+
+
     //Variables declared
     EditText eUserInput;
     TextView tvOutPut;
@@ -32,6 +37,7 @@ public class GenerateFragment extends Fragment {
     String password;
     Button bGenerate;
     Button bSave;
+    //private int contentView;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -149,8 +155,6 @@ public class GenerateFragment extends Fragment {
 
 
     }
-
-
 
 
 }
