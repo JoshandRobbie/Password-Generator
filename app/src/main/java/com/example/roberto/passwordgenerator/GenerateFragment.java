@@ -47,7 +47,7 @@ public class GenerateFragment extends Fragment {
         bGenerate = (Button) v.findViewById(R.id.bGenerate);
         bSave = (Button) v.findViewById(R.id.bSave);
 
-        // From lines 58 - 71
+
         // NOTE: The following code is not yet complete 3.14*****************************
         // This code will allow the button to perform a function when it has been clicked
         // We have created 2 buttons: bGenerate and bSave
@@ -75,12 +75,6 @@ public class GenerateFragment extends Fragment {
             }
         });
 
-
-        /*
-            NEXT STEPS:
-            Input from Edit Text
-         */
-
         return v;
 
     }
@@ -100,8 +94,9 @@ public class GenerateFragment extends Fragment {
 */
     public String generate(int x) {
 
+        // Object used to create Random String
+        Random password = new Random();
 
-        Random password = new Random(); // Object used to create Random String
         //Array contains the alphabet so that the program can use the letters to create a password
         String[] alphabet = {"A", "a", "B", "b", "C", "c", "D", "d", "E", "e", "F", "f", "G", "g", "H", "h", "I", "i", "J", "j", "K", "k", "L", "l",
                 "M", "m", "N", "n", "O", "o", "P", "p", "Q", "q", "R", "r", "S", "s", "T", "t", "U", "u", "V", "v", "W", "w", "X", "x", "Y", "y", "Z", "z"};
@@ -112,39 +107,47 @@ public class GenerateFragment extends Fragment {
          *
          */
 
+        //since x is called from the edit text and passed as a int
+        //here we can just set x = c which then follows through the proces
+        //in the same patern
         int c = x;
         int nc = (c / 2) + 1;
         int ncm = (nc / 2);
         int totalValues = c / 2;
 
-        //Since the c value is negative, you will recieve the remainder which will then send you through the statement
-        if (c % 2 == 0)
 
-        {
-            String passWord1 = "";
+            // if statement that will be executed if the user input is a even number
+            if (c % 2 == 0)
 
-            for (int i = 0; i < totalValues; i++) {
-                int alphaNum = password.nextInt(52);
-                passWord1 = passWord1 + alphabet[alphaNum];
-                int numNum = password.nextInt(10);// gives a range from 0-10
-                passWord1 = passWord1 + numNum;
-            } // incorporates the number into the password
+            {
+                String passWord1 = "";
 
-            return passWord1;
-        } else
+                for (int i = 0; i < totalValues; i++) {
+                    int alphaNum = password.nextInt(52); // gives a range from 0-52
+                    passWord1 = passWord1 + alphabet[alphaNum];
+                    int numNum = password.nextInt(10);// gives a range from 0-10
+                    passWord1 = passWord1 + numNum;
+                } // incorporates the number into the password
 
-        {
-            String passWord2 = "";
-            for (int i = 0; i < ncm + 1; i++) {
+                return passWord1;
 
-                int alphaNum = password.nextInt(52);
-                passWord2 = passWord2 + alphabet[alphaNum];
-                int numNum = password.nextInt(10);
-                passWord2 = passWord2 + numNum;
+                //else (if the user input was a odd number
+            } else
+
+            {
+                String passWord2 = "";
+                for (int i = 0; i < ncm + 1; i++) {
+
+                    int alphaNum = password.nextInt(52);
+                    passWord2 = passWord2 + alphabet[alphaNum];
+                    int numNum = password.nextInt(10);
+                    passWord2 = passWord2 + numNum;
+                }
+                return passWord2;
+
             }
-            return passWord2;
 
-        }
+
     }
 
 
