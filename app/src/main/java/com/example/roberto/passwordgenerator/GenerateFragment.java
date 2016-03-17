@@ -114,11 +114,11 @@ public class GenerateFragment extends Fragment {
          */
 
         //since x is called from the edit text and passed as a int
-        //here we can just set x = c which then follows through the proces
-        //in the same patern
+        //here we can just set x = c which then follows through the process
+        //in the same pattern
         int c = x;
         int nc = (c / 2) + 1;
-        int ncm = (nc / 2);
+        int ncm = (nc/c);
         int totalValues = c / 2;
 
 
@@ -142,14 +142,18 @@ public class GenerateFragment extends Fragment {
 
             {
                 String passWord2 = "";
-                for (int i = 0; i < ncm + 1; i++) {
+                for (int i = 0; i < totalValues; i++) {
 
                     int alphaNum = password.nextInt(52);
                     passWord2 = passWord2 + alphabet[alphaNum];
                     int numNum = password.nextInt(10);
                     passWord2 = passWord2 + numNum;
                 }
+
+                int alphaNum = password.nextInt(52);
+                passWord2 = passWord2 + alphabet[alphaNum];
                 return passWord2;
+            }
 
             }
 
@@ -157,4 +161,3 @@ public class GenerateFragment extends Fragment {
     }
 
 
-}

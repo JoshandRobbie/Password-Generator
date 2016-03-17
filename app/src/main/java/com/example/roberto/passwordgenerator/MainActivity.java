@@ -16,6 +16,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //This will keep the app from starting with the keyboard on display
+        //I added some code as well in the AndroidManifest.xml so that it can work
+        // in congruence with this
         this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
 
         adapter = new Adapter(getSupportFragmentManager());
