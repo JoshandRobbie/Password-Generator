@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import java.util.*;
 
@@ -28,8 +29,9 @@ public class GenerateFragment extends Fragment {
 
     //Variables declared
     EditText eUserInput;
-    EditText eOutPut;
-
+    TextView tvOutPut;
+    int x;
+    String password;
     Button bGenerate;
     Button bSave;
 
@@ -40,12 +42,40 @@ public class GenerateFragment extends Fragment {
         //Initializing widgets
         //Edit Text Id's
         eUserInput = (EditText) v.findViewById(R.id.etUserInput);
-        eOutPut = (EditText) v.findViewById(R.id.etOutPut);
+        tvOutPut = (TextView) v.findViewById(R.id.tvOutPut);
 
         //Initializing widgets
         //Button Id's
         bGenerate = (Button) v.findViewById(R.id.bGenerate);
         bSave = (Button) v.findViewById(R.id.bSave);
+
+        // From lines 58 - 71
+        // NOTE: The following code is not yet complete 3.14*****************************
+        // This code will allow the button to perform a function when it has been clicked
+        // We have created 2 buttons: bGenerate and bSave
+        // bGenerate will generate a random password once clicked
+        // bSave will allow for the user to save the generated password into a list view
+        // on another fragment
+
+        bGenerate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Code to Generate the random password
+
+                x = Integer.parseInt(eUserInput.getText().toString());
+                password = generate(x);
+                tvOutPut.setText(password);
+
+            }
+        }) ;
+
+        bSave.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //code to save the generated password
+
+            }
+        });
 
 
         /*
@@ -61,24 +91,20 @@ public class GenerateFragment extends Fragment {
         Not complete, contains errors
         FUNCTION: To store the data, into a local data base (Users device)
      */
-    public void saveInfo(View view){
+   /* public void saveInfo(View view){
         SharedPreferences sharedPref = getSharedPreferences("etOutPut", getContext().MODE_PRIVATE);
 
         SharedPreferences.Editor edit = sharedPref.edit();
 
         editor.putString("Password", eOutPut.getText().toStirng());
+        }
 
-
-
-    }
-
-
-
+*/
     public String generate(int x) {
 
-        Scanner vitamin = new Scanner(System.in); //Scanner for randomString Function
+       // Scanner vitamin = new Scanner(System.in); //Scanner for randomString Function
         Random password = new Random(); // Object used to create Random String
-        int c; // Used for user input on regarding the amount of characters he/she wishes to use in their password
+       // int c; // Used for user input on regarding the amount of characters he/she wishes to use in their password
 
 
         //Array[52]
@@ -90,9 +116,11 @@ public class GenerateFragment extends Fragment {
          * We have declared all our variables that will
          * be used for the Generate Password algorithm
          *
-          */
-        c = x;
-        c = vitamin.nextInt();
+         */
+
+
+       // int c = vitamin.nextInt();
+        int c = x;
         int nc = (c / 2) + 1;
         int ncm = (nc / 2);
         int totalValues = c / 2;
@@ -107,7 +135,7 @@ public class GenerateFragment extends Fragment {
                 int alphaNum = password.nextInt(52);
                 passWord1 = passWord1 + alphaNum; //System.out.print(alphabet[alphaNum]);
                 int numNum = password.nextInt(10);// gives a range from 0-10
-               passWord1 = passWord1 + numNum; // System.out.print(numNum);
+                passWord1 = passWord1 + numNum; // System.out.print(numNum);
             } // incorporates the number into the password
 
             //System.out.println();
@@ -119,7 +147,7 @@ public class GenerateFragment extends Fragment {
             for (int i = 0; i < ncm + 1; i++) {
 
                 int alphaNum = password.nextInt(52);
-                passWord2 = passWord2 + alphaNum; //System.out.print(alphabet[alphaNum]);
+                passWord2 = passWord2 + alphaNum ; //System.out.print(alphabet[alphaNum]);
                 int numNum = password.nextInt(10);
                 passWord2 = passWord2 + numNum; // System.out.println(numNum);
 
@@ -131,5 +159,8 @@ public class GenerateFragment extends Fragment {
 
         }
     }
+
+
+
 
 }
