@@ -9,9 +9,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import java.util.Random;
+
+import static android.R.layout.simple_list_item_1;
 
 /**
  * Created by Robert Ortiz
@@ -27,22 +30,19 @@ import java.util.Random;
  */
 public class GenerateFragment extends Fragment {
 
-    //declared Array
-   // String[] savedPasswords;
-
 
     //Variables declared
     EditText eUserInput;
     TextView tvOutPut;
-    int x;
     String password;
     Button bGenerate;
     Button bSave;
-    //private int contentView;
+    int x;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_generate, container, false);
+
 
         //Initializing widgets
         //Edit Text Id's
@@ -146,9 +146,10 @@ public class GenerateFragment extends Fragment {
                     passWord1 = passWord1 + numNum;
                 } // incorporates the number into the password
 
+                //Will return the password generated that is stored in passWord2
                 return passWord1;
 
-                //else (if the user input was a odd number
+                //else (if the user input was a odd number)
             } else
 
             {
@@ -161,14 +162,22 @@ public class GenerateFragment extends Fragment {
                     passWord2 = passWord2 + numNum;
                 }
 
+                //since the else statement only will output a even number (which will be one value
+                // less than users input was ) I added another value to be added to the end
+                //ex. If the user input was 7, in the loop above, the user would receive a
+                //password of 6 now at the end this code will add 1 more value(a string); thus
+                //displaying 7 characters instead of 6
                 int alphaNum = password.nextInt(52);
                 passWord2 = passWord2 + alphabet[alphaNum];
+
+                //Will return the password generated that is stored in passWord2
                 return passWord2;
             }
 
             }
 
 
-    }
+
+}
 
 
