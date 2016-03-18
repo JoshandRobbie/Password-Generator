@@ -6,11 +6,31 @@ package com.example.roberto.passwordgenerator;
 public class Passwords {
 
     private String Password;
-    private String Name;
+    private String UserName;
+    private String Website;
 
-    public void Passwords(String pass, String name){
+    public String getWebsite() {
+        return Website;
+    }
+
+    public void setWebsite(String website) {
+        Website = website;
+    }
+
+    public String getUserName() {
+        return UserName;
+    }
+
+    public void setUserName(String userName) {
+        UserName = userName;
+    }
+
+    public void Passwords(String pass, String name,String Web){
         Password = pass;
-        Name = name;
+        Website = Web;
+        UserName = name;
+
+
     }
 
     public String getPassword() {
@@ -21,12 +41,5 @@ public class Passwords {
         Password = password;
     }
 
-    public String getName() {
-        return Name;
-    }
-
-    public void setName(String name) {
-        Name = name;
-    }
 
 }

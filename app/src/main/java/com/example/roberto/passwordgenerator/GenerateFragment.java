@@ -2,6 +2,8 @@ package com.example.roberto.passwordgenerator;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -69,6 +71,16 @@ public class GenerateFragment extends Fragment {
                 password = generate(y);
                 tvOutPut.setText(password);
 
+                Fragment fr = new EditFragment();
+
+                FragmentManager fm = getFragmentManager();
+                FragmentTransaction ft = fm.beginTransaction();
+
+                Bundle args = new Bundle();
+                args.putString("Password", password);
+                fr.setArguments(args);
+                ft.replace(R.id.fragmentContainer,fr);
+                ft.commit();
             }
         }) ;
 

@@ -22,7 +22,9 @@ public class Adapter extends FragmentPagerAdapter {
         switch(position){
             case 0: return new GenerateFragment();
 
-            case 1: return new ViewFragment();
+            case 1: return new ViewFragment();//EditFragment();
+
+           // case 2: return new ViewFragment();
 
             default:
                 return null;
