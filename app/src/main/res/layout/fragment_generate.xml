@@ -38,7 +38,7 @@
         android:layout_height="wrap_content"
         android:background="#ffffff"
         android:textSize="20sp"
-        android:hint="Enter any number from 2-30"
+        android:hint="Enter any number greater than 1"
         android:layout_marginBottom="19dp"
         android:layout_above="@+id/bGenerate"
         android:layout_alignParentLeft="true"
