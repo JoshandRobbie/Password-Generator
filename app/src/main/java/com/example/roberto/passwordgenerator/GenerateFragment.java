@@ -9,12 +9,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ListView;
 import android.widget.TextView;
 
 import java.util.Random;
-
-import static android.R.layout.simple_list_item_1;
 
 /**
  * Created by Robert Ortiz

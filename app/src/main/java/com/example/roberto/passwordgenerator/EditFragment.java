@@ -43,6 +43,7 @@ public class EditFragment extends Fragment {
                 p.setWebsite(sWeb);
                 PasswordSingleton.get(getActivity()).addPassword(p);
 
+
                 Fragment fragment = new ViewFragment();
                 FragmentManager fm = getFragmentManager();
                 FragmentTransaction ft = fm.beginTransaction();

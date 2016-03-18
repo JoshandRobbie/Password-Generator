@@ -5,22 +5,22 @@
               android:orientation="vertical">
 
     <EditText
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:hint="What website is this password used for?"
         android:id = "@+id/etWebsite"
         />
 
     <EditText
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:hint="What's your user name for this website?"
         android:id = "@+id/etUserName"
         />
-<Button
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:text="Save"
-    android:id="@+id/bSave"
+        <Button
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="Save"
+             android:id="@+id/bSave"
     />
 </LinearLayout>
