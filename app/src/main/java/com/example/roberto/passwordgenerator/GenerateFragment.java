@@ -5,7 +5,6 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -65,9 +64,9 @@ public class GenerateFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 //Code to Generate the random password
-
-                x = Integer.parseInt(eUserInput.getText().toString());
-                password = generate(x);
+                String x = eUserInput.getText().toString();
+                int y = Integer.parseInt(x);
+                password = generate(y);
                 tvOutPut.setText(password);
 
             }
