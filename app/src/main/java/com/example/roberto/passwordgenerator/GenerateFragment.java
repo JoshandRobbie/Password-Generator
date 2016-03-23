@@ -129,7 +129,6 @@ public class GenerateFragment extends Fragment {
         int ncm = (nc/c);
         int totalValues = c / 2;
 
-
             // if statement that will be executed if the user input is a even number
             if (c % 2 == 0)
 
