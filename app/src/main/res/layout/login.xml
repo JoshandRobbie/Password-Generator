@@ -16,7 +16,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/ivBalloon"
             android:src="@drawable/balloon"
-            android:layout_above="@+id/number1"
+            android:layout_above="@+id/bNumber1"
             android:layout_alignParentTop="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
@@ -26,10 +26,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="1"
-            android:id="@+id/number1"
-            android:layout_alignTop="@+id/number2"
-            android:layout_toLeftOf="@+id/number2"
-            android:layout_toStartOf="@+id/number2"
+            android:id="@+id/bNumber1"
+            android:layout_alignTop="@+id/bNumber2"
+            android:layout_toLeftOf="@+id/bNumber2"
+            android:layout_toStartOf="@+id/bNumber2"
             android:background="#27C6DB"
             />
 
@@ -37,10 +37,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="2"
-            android:id="@+id/number2"
-            android:layout_above="@+id/number5"
-            android:layout_toLeftOf="@+id/number6"
-            android:layout_toStartOf="@+id/number6"
+            android:id="@+id/bNumber2"
+            android:layout_above="@+id/bNumber5"
+            android:layout_toLeftOf="@+id/bNumber6"
+            android:layout_toStartOf="@+id/bNumber6"
             android:background="#27C6DB"
             />
 
@@ -48,8 +48,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="3"
-            android:id="@+id/number3"
-            android:layout_alignTop="@+id/number2"
+            android:id="@+id/bNumber3"
+            android:layout_alignTop="@+id/bNumber2"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
             android:layout_marginRight="58dp"
@@ -61,10 +61,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="4"
-            android:id="@+id/number4"
-            android:layout_alignTop="@+id/number5"
-            android:layout_toLeftOf="@+id/number5"
-            android:layout_toStartOf="@+id/number5"
+            android:id="@+id/bNumber4"
+            android:layout_alignTop="@+id/bNumber5"
+            android:layout_toLeftOf="@+id/bNumber5"
+            android:layout_toStartOf="@+id/bNumber5"
             android:background="#27C6DB"
             />
 
@@ -72,10 +72,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="5"
-            android:id="@+id/number5"
-            android:layout_alignTop="@+id/number6"
-            android:layout_toLeftOf="@+id/number6"
-            android:layout_toStartOf="@+id/number6"
+            android:id="@+id/bNumber5"
+            android:layout_alignTop="@+id/bNumber6"
+            android:layout_toLeftOf="@+id/bNumber6"
+            android:layout_toStartOf="@+id/bNumber6"
             android:background="#27C6DB"
             />
 
@@ -83,10 +83,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="6"
-            android:id="@+id/number6"
-            android:layout_above="@+id/number9"
-            android:layout_alignLeft="@+id/number3"
-            android:layout_alignStart="@+id/number3"
+            android:id="@+id/bNumber6"
+            android:layout_above="@+id/bNumber9"
+            android:layout_alignLeft="@+id/bNumber3"
+            android:layout_alignStart="@+id/bNumber3"
             android:background="#27C6DB"
             />
 
@@ -94,10 +94,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="7"
-            android:id="@+id/number7"
-            android:layout_below="@+id/number5"
-            android:layout_toLeftOf="@+id/number5"
-            android:layout_toStartOf="@+id/number5"
+            android:id="@+id/bNumber7"
+            android:layout_below="@+id/bNumber5"
+            android:layout_toLeftOf="@+id/bNumber5"
+            android:layout_toStartOf="@+id/bNumber5"
             android:background="#27C6DB"
             />
 
@@ -105,10 +105,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="8"
-            android:id="@+id/number8"
-            android:layout_above="@+id/number0"
-            android:layout_alignLeft="@+id/number0"
-            android:layout_alignStart="@+id/number0"
+            android:id="@+id/bNumber8"
+            android:layout_above="@+id/bNumber0"
+            android:layout_alignLeft="@+id/bNumber0"
+            android:layout_alignStart="@+id/bNumber0"
             android:background="#27C6DB"
             />
 
@@ -116,10 +116,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="9"
-            android:id="@+id/number9"
-            android:layout_alignTop="@+id/number8"
-            android:layout_alignLeft="@+id/number6"
-            android:layout_alignStart="@+id/number6"
+            android:id="@+id/bNumber9"
+            android:layout_alignTop="@+id/bNumber8"
+            android:layout_alignLeft="@+id/bNumber6"
+            android:layout_alignStart="@+id/bNumber6"
             android:background="#27C6DB"
             />
 
@@ -127,10 +127,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="0"
-            android:id="@+id/number0"
+            android:id="@+id/bNumber0"
             android:layout_alignParentBottom="true"
-            android:layout_toRightOf="@+id/number7"
-            android:layout_toEndOf="@+id/number7"
+            android:layout_toRightOf="@+id/bNumber7"
+            android:layout_toEndOf="@+id/bNumber7"
             android:background="#27C6DB"
             />
 
@@ -139,7 +139,7 @@
             android:layout_height="wrap_content"
             android:inputType="number"
             android:ems="10"
-            android:id="@+id/editText"
+            android:id="@+id/etPasswordStored"
             android:layout_centerVertical="true"
             android:layout_centerHorizontal="true" />
 
@@ -147,22 +147,22 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Done"
-            android:id="@+id/done"
+            android:id="@+id/bDone"
             android:layout_alignParentBottom="true"
-            android:layout_toRightOf="@+id/number0"
-            android:layout_alignRight="@+id/number9"
-            android:layout_alignEnd="@+id/number9"
+            android:layout_toRightOf="@+id/bNumber0"
+            android:layout_alignRight="@+id/bNumber9"
+            android:layout_alignEnd="@+id/bNumber9"
             android:background="#27C6DB"
             />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/emptyButton"
-            android:layout_below="@+id/number7"
-            android:layout_toLeftOf="@+id/number8"
-            android:layout_toStartOf="@+id/number8"
+            android:id="@+id/bDelete"
+            android:layout_below="@+id/bNumber7"
+            android:layout_toLeftOf="@+id/bNumber8"
+            android:layout_toStartOf="@+id/bNumber8"
             android:background="#27C6DB"
-            />
+            android:text="Delete" />
     </RelativeLayout>
 </LinearLayout>

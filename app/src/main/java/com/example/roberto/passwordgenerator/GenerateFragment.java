@@ -34,11 +34,16 @@ public class GenerateFragment extends Fragment {
     String password;
     Button bGenerate;
     Button bSave;
+
     int x;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_generate, container, false);
+
+
+
+
 
 
         //Initializing widgets
@@ -52,6 +57,8 @@ public class GenerateFragment extends Fragment {
         bSave = (Button) v.findViewById(R.id.bSave);
 
 
+
+
         // NOTE: The following code is not yet complete 3.14*****************************
         // This code will allow the button to perform a function when it has been clicked
         // We have created 2 buttons: bGenerate and bSave
@@ -59,15 +66,29 @@ public class GenerateFragment extends Fragment {
         // bSave will allow for the user to save the generated password into a list view
         // on another fragment
 
+        //@onclick Generate button will return the value from Generate method algorithm and will
+        // display it on the tvOutPut box
         bGenerate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Code to Generate the random password
+                //Code to Generate the random password\
                 String x = eUserInput.getText().toString();
                 int y = Integer.parseInt(x);
                 password = generate(y);
                 tvOutPut.setText(password);
 
+                
+            }
+        }) ;
+
+
+        // @Onclick save button will allow for the user to save String Generated from
+        // onclick generate method
+
+        bSave.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //code to save the generated password
                 Fragment fr = new EditFragment();
 
                 FragmentManager fm = getFragmentManager();
@@ -78,13 +99,6 @@ public class GenerateFragment extends Fragment {
                 fr.setArguments(args);
                 ft.replace(R.id.fragmentContainer,fr);
                 ft.commit();
-            }
-        }) ;
-
-        bSave.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //code to save the generated password
 
             }
         });
